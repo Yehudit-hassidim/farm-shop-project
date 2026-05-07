@@ -1,7 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit';
+import productsData from '../../../public/db.json';
 
 const initialState = {
-  items: [], 
+  items: productsData.products, // כאן אנחנו לוקחים את המוצרים מה-JSON
 };
 
 const productSlice = createSlice({

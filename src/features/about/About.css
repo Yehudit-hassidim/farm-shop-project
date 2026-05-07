@@ -1,0 +1,71 @@
+.about-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 20px 0;
+    direction: rtl; /* מבטיח שהטקסט יזרום נכון מימין לשמאל */
+}
+
+.about-card {
+    width: 100%;
+    background-color: white;
+    padding: 50px;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    text-align: right;
+    line-height: 1.8;
+    box-sizing: border-box;
+}
+
+.about-title {
+    color: #065a05;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.about-subtitle {
+    color: #7f8c8d;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.about-divider {
+    height: 2px;
+    background: linear-gradient(to left, transparent, #057125, transparent);
+    margin: 20px auto 40px;
+    width: 80%;
+}
+
+.about-content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.about-section {
+    background-color: #f9fbfd;
+    padding: 25px;
+    border-radius: 15px;
+    border-right: 5px solid #116f0c; /* הדגשה בצד ימין עבור עברית */
+}
+
+.about-footer {
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-top: 20px; /* תוקן מ-marginTop ל-margin-top */
+}
+
+/* התאמה למובייל */
+@media (max-width: 600px) {
+    .about-card {
+        padding: 20px;
+    }
+    .about-title {
+        font-size: 1.8rem;
+    }
+}

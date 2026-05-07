@@ -1,0 +1,79 @@
+.policy-container {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 20px;
+  direction: rtl;
+  font-family: sans-serif;
+}
+
+.policy-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.policy-header h1 {
+  font-size: 2.5rem;
+  color: #0f5b39; /* ירוק חקלאי */
+  margin-bottom: 10px;
+}
+
+.policy-header p {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.policy-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.policy-card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  border: 1px solid #eee;
+  transition: transform 0.3s ease;
+}
+
+.policy-card:hover {
+  transform: translateY(-5px);
+  border-color: #0f5b39;
+}
+
+.policy-card .icon {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.policy-card h3 {
+  color: #333;
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+}
+
+.policy-card p {
+  color: #555;
+  line-height: 1.6;
+  margin: 5px 0;
+}
+
+.policy-card .small {
+  font-size: 0.85rem;
+  color: #999;
+}
+
+.policy-card .highlight {
+  color: #0f5b39;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* התאמה למובייל */
+@media (max-width: 600px) {
+  .policy-header h1 {
+    font-size: 1.8rem;
+  }
+}

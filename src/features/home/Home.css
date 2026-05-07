@@ -1,0 +1,140 @@
+/* קונטיינר כללי */
+.home-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #000;
+}
+
+/* וידאו הרקע */
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  filter: brightness(1.5); /* מכהה מעט את הוידאו כדי שהטקסט יבלוט */
+  
+}
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  
+  /* הבהרת הסרטון */
+  filter: brightness(1.6) contrast(0.9) opacity(0.6); 
+}
+
+/* שכבת התוכן מעל הוידאו */
+.content-overlay {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column; /* כותרת מעל עיגולים */
+  justify-content: center;
+  align-items: center;
+  gap: 50px; /* רווח בין הכותרת לעיגולים */
+  padding: 20px;
+}
+
+/* הכותרת המרשימה */
+.welcome-title {
+  color: white;
+  font-size: 4rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+  text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.8);
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* קבוצת העיגולים */
+.category-circles {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* עיצוב כל עיגול */
+.circle-item {
+  position: relative;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  border: 4px solid white;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.circle-item:hover {
+  transform: scale(1.05);
+}
+
+.animal-img-container, .animal-img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* תיבת הטקסט בתוך העיגול */
+.circle-text-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* דוחף לתחתית */
+  align-items: center;
+  color: white;
+  padding-bottom: 25px; /* מרווח מהקצה התחתון */
+  box-sizing: border-box;
+}
+
+.circle-text-box h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.6rem;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+}
+
+/* כפתור הקישור (מעוצב ככפתור) */
+.buy-btn-small {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  padding: 6px 15px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition: 0.3s;
+}
+
+.buy-btn-small:hover {
+  background: white;
+  color: black;
+}
+
+/* אנימציית כניסה לכותרת */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* התאמה למובייל */
+@media (max-width: 768px) {
+  .welcome-title { font-size: 2.5rem; }
+  .circle-item { width: 180px; height: 180px; }
+}

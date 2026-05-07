@@ -1,0 +1,139 @@
+/* עיצוב כללי ל-Footer */
+.footer {
+  background-color: #f9f9f9;
+  padding: 50px 20px 20px;
+  direction: rtl; /* יישור לימין עבור עברית */
+  border-top: 1px solid #e0e0e0;
+  color: #333;
+  font-family: sans-serif;
+}
+
+/* סידור החלק העליון בעמודות */
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-section h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+/* עיצוב רשימות וקישורים */
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+/* עיצוב ה-Link (תגית a בדפדפן) */
+.footer-section ul li a {
+  text-decoration: none;
+  color: #555;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: #0f5b39; /* צבע המותג ירוק חקלאי */
+}
+
+/* עיצוב רשימת תפוצה */
+.newsletter p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.newsletter-form {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.newsletter-form input {
+  flex: 1;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 0 5px 5px 0; /* עיגול בצד ימין (בגלל ה-RTL) */
+  outline: none;
+}
+
+.newsletter-form button {
+  padding: 10px 20px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-right: none;
+  border-radius: 5px 0 0 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.newsletter-form button:hover {
+  background-color: #e2e2e2;
+}
+
+/* שעות פעילות וטלפון */
+.contact-info p {
+  margin: 5px 0;
+  font-size: 0.95rem;
+}
+
+.phone {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 10px;
+  color: #000;
+}
+
+/* חלק תחתון (זכויות יוצרים) */
+.footer-bottom {
+  margin-top: 50px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+  text-align: left; /* יישור הקרדיט לשמאל כמו בתמונה */
+}
+
+.copyright {
+  font-size: 0.85rem;
+  color: #888;
+}
+
+/* התאמה למסכים קטנים */
+@media (max-width: 768px) {
+  .footer-top {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .newsletter-form {
+    max-width: 300px;
+    margin: 0 auto 15px;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+  }
+  .status-message {
+  font-size: 0.8rem;
+  margin-top: 5px;
+  color: #0f5b39; /* צבע ירוק להצלחה */
+  font-weight: bold;
+}
+}

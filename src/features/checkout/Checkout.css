@@ -1,0 +1,67 @@
+/* מבנה השורה של התוקף וה-CVV */
+.form-row {
+    display: flex;
+    gap: 8px; /* רווח קטן יותר בין השדות כדי לחסוך מקום */
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+}
+
+/* הגדרת רוחב ספציפי לכל קבוצה בשורה */
+.form-row .form-group {
+    flex: 1; /* מחלק את השטח שווה בשווה */
+    min-width: 0; /* מאפשר ל-flexbox לצמצם את השדה מתחת לגודל התוכן שלו */
+}
+
+/* וודאי שהאינפוטים תמיד נשארים בתוך הדיב שלהם */
+.form-group input, 
+.form-group textarea {
+    width: 100%;
+    box-sizing: border-box; /* קריטי: כולל את ה-padding בתוך ה-100% */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+/* שמירה על עיצוב הכפתורים מהתמונה */
+.checkout-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.btn-pay {
+    background-color: #27ae60; /* הירוק מהתמונה */
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    flex: 1;
+    font-size: 16px;
+}
+
+.btn-back {
+    background-color: #7f8c8d; /* האפור מהתמונה */
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    flex: 1;
+    font-size: 16px;
+}
+
+/* מסגרת הכרטיס */
+.checkout-card {
+    padding: 30px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 480px; /* רוחב אופטימלי להצגת 3 שדות בשורה */
+    margin: 20px auto;
+    direction: rtl;
+}
